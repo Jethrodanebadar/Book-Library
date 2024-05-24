@@ -1,0 +1,74 @@
+body{
+    padding: 3rem;
+    margin: 0px;
+    height: 100vh;
+
+}
+
+#bookContainer{
+    display: flex;
+    gap: 2rem;
+    padding: 2rem;
+}
+
+.book-card{
+    border: 2px solid black;
+    padding: 1rem;
+}
+
+#newBookBtn{
+    justify-self: center;
+}
+
+.checkbox-container{
+    max-height: 2em;
+}
+
+svg{
+    max-height: 2em; 
+}
+
+.bookbtn{
+    gap:10%;
+    /* background-color: aqua; */
+    display: flex;
+    justify-content: flex-end;
+    max-height: 1.5rem;
+}
+
+#bookForm{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+#closeDialog{
+    justify-content: center;
+}
+
+input{
+    background-color: azure;
+    border-radius: 5px;
+    border:1px solid rgba(0, 0, 0, 0.534) ;
+}
+
+.submit-btn{
+    display: flex;
+    margin-top: 1rem;
+    justify-content: center;
+    align-items: center;
+}
+
+button{
+    background-color: transparent;
+    border-radius: 5px;
+    border:1px solid rgba(0, 0, 0, 0.534) ;
+}
+
+.second-div{
+    position: absolute;
+    display: flex;
+    justify-self: center;
+    bottom: 5rem;
+}
