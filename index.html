@@ -1,37 +1,51 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Library</title>
-    <link rel="stylesheet" href="styles.css">
-</head>
-<body>
-    <div id="bookContainer"></div>
-    <div class="second-div">
-        <button id="newBookBtn">NEW BOOK</button>
-    </div>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous" defer></script>
+    <link rel="stylesheet" href="styles.css" />
+    <script src="script.js" defer></script>
+    <title>Book Library</title>
+  </head>
+  <body>
+    <header>
+      <h2>Book Library</h2>
+      <button id="addbtn">Add Book</button>
+    </header>
 
-    <dialog id="newBookDialog">
-        <h2>Add New Book</h2>
-        <form id="bookForm">
-            <label for="title">Title:</label>
-            <input type="text" id="title" name="title" required><br>
-            <label for="author">Author:</label>
-            <input type="text" id="author" name="author" required><br>
-            <label for="pages">Pages:</label>
-            <input type="number" id="pages" name="pages" required><br>
-            <label for="hasRead">Has Read:</label>
-            <input type="checkbox" id="hasRead" name="hasRead"><br>
-            <button type="submit">Submit</button>
-        </form>
-        <div class="submit-btn">
-            <button id="closeDialog">Close</button>
+    <div class="bookcard-container">
+        
+    </div>
+
+    <dialog id="addbook-dialog">
+      <h2>Add a Book</h2>
+      <form id="addbook-form">
+        <div class="label-input-wrapper">
+          <div class="label-input-container">
+            <label for="book-title">Title:</label>
+            <input id="book-title" type="text" name="Title" />
+          </div>
+          <div class="label-input-container">
+            <label for="book-author">Author:</label>
+            <input id="book-author" type="text" name="Author"  />
+          </div>
+          <div class="label-input-container">
+            <label for="book-pages">Pages:</label>
+            <input id="book-pages" type="number" name="Pages" />
+          </div>
+          <div id="hasReadContainer" class="label-input-container">
+            <label for="book-hasRead">hasRead:</label>
+            <input id="book-hasRead" type="checkbox" name="hasRead"/>
+          </div>
+          <div class="button-container">
+            <button id="cancelbtn-form" formmethod="dialog">Cancel</button> 
+            <button id="addbtn-form" type="submit">Add</button>
+          </div>
         </div>
-      
-    </dialog>
-
-    <script src="script.js"></script>
-</body>
+      </form>
+    </dialog>    
+  </body>
 </html>

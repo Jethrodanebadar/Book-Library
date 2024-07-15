@@ -1,74 +1,231 @@
-body{
-    padding: 3rem;
-    margin: 0px;
-    height: 100vh;
+@import url("https://fonts.googleapis.com/css?family=Chivo:700|Krub:400");
 
+body {
+  font-family: "Krub";
+  font-weight: 400;
 }
 
-#bookContainer{
+h1, h2, h3, h4, h5 {
+    font-family: "Chivo";
+    font-weight: 700;
+    margin-bottom: 2rem;
+    text-align: center;
+    text-overflow: ellipsis;
+  }
+  
+
+p{
+    text-overflow: ellipsis;
+}
+
+html {
+  font-size: 100%;
+} /* 16px */
+
+h1 {
+  font-size: 4.21rem; /* 67.36px */
+}
+
+h2 {
+  font-size: 3.158rem; /* 50.56px */
+}
+
+h3 {
+  font-size: 2.369rem; /* 37.92px */
+}
+
+h4 {
+  font-size: 1.777rem; /* 28.48px */
+}
+
+h5 {
+  font-size: 1.333rem; /* 21.28px */
+}
+
+small {
+  font-size: 0.75rem; /* 12px */
+}
+
+:root {
+  --shadow: #10130d56;
+  --dark: #10130d;
+  --light: #fbfdfa;
+  --primary: #b07f58;
+  --secondary: #d6b59a;
+  --accent: #cb956a;
+}
+
+body,
+html {
+  padding: 0;
+  margin: 0;
+  height: 100%;
+}
+
+body {
+  background-color: hsl(27, 42%, 72%, 30%);
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+header {
+  padding: 2rem 0rem;
+  display: flex;
+  justify-content: start;
+  flex-direction: column;
+  margin-bottom: 4rem;
+}
+
+header h2{
+    text-shadow: 0px 0px 3px var(--shadow);  
+}
+
+.label-input-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+}
+
+.label-input-container {
+  display: flex;
+  flex-direction: column;
+}
+
+#addbook-dialog {
+  padding: 3rem;
+  border-radius: 10px;
+}
+
+#addbtn {
+  color: var(--light);
+  font-family: "Krub";
+  font-weight: 400;
+  padding: 0.5rem 1rem;
+  border-radius: 10px;
+  background-color: var(--primary);
+  border: transparent;
+  box-shadow: 1px 1px 3px var(--shadow);
+  max-width: 50%;
+  margin: auto;
+  box-shadow: 0px 0px 6px var(--shadow);
+}
+
+#addbtn:hover{
+    background-color: var(--shadow);
+}
+
+label {
+  font-size: 0.6rem;
+  opacity: 0.8;
+}
+
+input {
+  border-radius: 5px;
+  border: 1px solid var(--shadow);
+  padding: 0.2rem;
+}
+
+dialog::backdrop {
+  backdrop-filter: blur(1px);
+  background-color: rgba(255, 255, 255, 0.5);
+}
+
+#cancelbtn-form {
+  background-color: hsl(27, 42%, 72%, 30%);
+  font-family: "Krub";
+  font-weight: 400;
+  border: 1px solid var(--shadow);
+  padding: 0.2rem 0.5rem;
+  border-radius: 5px;
+  box-shadow: 1px 1px 2px var(--shadow);
+}
+
+#addbtn-form {
+  background-color: hsl(27, 42%, 72%, 30%);
+  font-family: "Krub";
+  font-weight: 400;
+  border: 1px solid var(--shadow);
+  padding: 0.2rem 0.5rem;
+  border-radius: 5px;
+  box-shadow: 1px 1px 2px var(--shadow);
+}
+
+#cancelbtn-form:hover, #addbtn-form:hover{
+    background-color: var(--shadow);
+    color: var(--light);
+}
+
+.bookcard-container{
     display: flex;
+    flex-wrap: wrap;
+    justify-content: start;
     gap: 2rem;
-    padding: 2rem;
+    width: 85%;
+    margin: 0 auto;
 }
 
 .book-card{
-    border: 2px solid black;
-    padding: 1rem;
-}
-
-#newBookBtn{
-    justify-self: center;
-}
-
-.checkbox-container{
-    max-height: 2em;
-}
-
-svg{
-    max-height: 2em; 
-}
-
-.bookbtn{
-    gap:10%;
-    /* background-color: aqua; */
-    display: flex;
-    justify-content: flex-end;
-    max-height: 1.5rem;
-}
-
-#bookForm{
     display: flex;
     flex-direction: column;
-    align-items: center;
-    justify-content: center;
+    justify-content: space-between;
+    border: 1px solid var(--shadow);
+    border-radius: 20px;
+    gap: 2rem;
+    padding: 1.5rem;
+    background-color: var(--light);
+    width: 337px;
+    box-shadow: 0px 0px 12px var(--shadow);
 }
 
-#closeDialog{
-    justify-content: center;
-}
-
-input{
-    background-color: azure;
-    border-radius: 5px;
-    border:1px solid rgba(0, 0, 0, 0.534) ;
-}
-
-.submit-btn{
+.bookcard-btn-container{
     display: flex;
-    margin-top: 1rem;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
+   
 }
 
-button{
+#remove-btn{
+    border: transparent;
     background-color: transparent;
-    border-radius: 5px;
-    border:1px solid rgba(0, 0, 0, 0.534) ;
+    margin-bottom: .3rem;
 }
 
-.second-div{
-    position: absolute;
+#hasReadContainer{
     display: flex;
-    justify-self: center;
-    bottom: 5rem;
+    width: 30%;
+    flex-direction: row;
+    gap: 1rem;
+    justify-content: start;
+    align-items: center;
 }
+
+#book-hasRead {
+    transform: scale(1.2);
+  }
+
+.bookcard-content{
+    display: flex ;
+    
+    flex-direction: column;
+}
+
+.book-card h4 {
+    text-align: start;
+    font-family: "Chivo";
+    font-weight: 700;
+    margin-bottom: 0.5rem; 
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+
+
+  .form-check-input:checked, .form-check-input:active {
+    background-color: var(--primary) ;
+    border: transparent;
+  }
+
+  svg:hover{
+    fill: var(--primary)
+  }
